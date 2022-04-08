@@ -1,9 +1,23 @@
 //import Client library and Intents library from discord.js
-const { Client, Intents } = require['discord.js']
-const client = new Client({ Intents: [Intents.FLAGS.GUILDS]});
+const { Client, Intents, Message } = require('discord.js');
 
-client.once('ready', () = {
-    console.console.log();
+//Initialize Client class   //Intents returns every single event that occurs on our server
+const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
+
+//Run function once, when the client is online
+client.once('ready', () => {
+    console.log("Ready!");
 })
 
-client.login("OTYxNDcyNTczMDgwNzM5ODYw.Yk5fHA.ERLlDmIJ_Q7HqWf-czT5P-tJcto")
+//Run function when a certain condition is met
+client.on('messageCreate', (message) => {
+    //make sure the bot isn't replying to itself
+    if(message.author.id === client.user.id) return;
+
+    //looks to see what user typed and replies back with message
+    if(message.content === "ping") {
+        message.reply("pong")
+    }
+})
+
+client.login("OTYxNDcyNTczMDgwNzM5ODYw.Yk5fHA.ZWsyJM8jkL_L-nfKdJbwCKTtpl8")

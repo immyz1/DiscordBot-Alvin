@@ -1,0 +1,23 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immyz1/DiscordBot-Alvin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/immyz1/DiscordBot-Alvin/issues"
+  },
+  "homepage": "https://github.com/immyz1/DiscordBot-Alvin#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}

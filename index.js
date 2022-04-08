@@ -1,5 +1,7 @@
 //import Client library and Intents library from discord.js
 const { Client, Intents, Message } = require('discord.js');
+//import config file
+const config = require('./config.json');
 
 //Initialize Client class   //Intents returns every single event that occurs on our server
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
@@ -20,4 +22,4 @@ client.on('messageCreate', (message) => {
     }
 })
 
-client.login("OTYxNDcyNTczMDgwNzM5ODYw.Yk5fHA.ZWsyJM8jkL_L-nfKdJbwCKTtpl8")
+client.login(config.token) //grab token from config file
